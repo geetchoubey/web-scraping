@@ -12,5 +12,5 @@ const mainStack = new MainStack(app, 'MainScraperStack', {
 
 const { stateMachine } = new ScraperStack(mainStack, 'scraper-stack');
 new EventsStack(mainStack, 'events-stack', {
-  stateMachineArn: stateMachine.stateMachineArn,
+  stateMachine,
 });
